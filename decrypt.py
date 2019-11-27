@@ -33,11 +33,11 @@ def main():
                         if len(pswd) > 4 :
                             pswd = pswd[:4]
                         pswd += alphabet[p]
-                        print(pswd,"\n")
                         try:
                             #print(1)
                             with zipfile.ZipFile(file_name) as file:
                                 file.extractall(pwd = bytes(pswd, 'utf-8'))
+                            print(pswd)
                             break
 
                         except:
